@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.dark-mode-p {
+    color: yellow;
+}
+
+.preto {
+    background-color: var(--cor01);
+    color: var(--cor00);
+}
+
+.html-aumentar-texto {
+    font-size: 150%;
+}
+
+.body-color {
+    color: #5a5a5a;
+}
+
+
+
+
