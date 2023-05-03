@@ -21,3 +21,16 @@ console.log(lista.querySelector('li'))
 
 //retorna o ultimo filho do elemento lista
 console.log(lista.querySelectorAll('li:last-child'))
+
+const titulo = document.querySelector('.titulo')
+console.log(titulo)
+
+console.log(titulo.parentElement)
+
+const tituloClone = titulo.cloneNode()
+tituloClone.innerHTML = "<p>Agora eu tenho um parágrafo</p>"
+console.log("Clone do Titulo: ", tituloClone)
+
+//lista com os filtos em forma de array
+const filhosLista = lista.children 
+console.log(filhosLista[filhosLista.length -1]) //ultimo filho da lista

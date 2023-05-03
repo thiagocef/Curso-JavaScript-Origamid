@@ -1,30 +1,22 @@
-const lista = document.querySelector('.animais-lista')
+const lista = document.querySelector('.animais-lista'),
+      contato = document.querySelector('.contato'),
+      titulo = document.querySelector('.contato > .titulo'),
+      animaisTipos = document.querySelector('.animais-tipos'),
+      animais = document.querySelector('.animais'),
+      mapa = document.querySelector('.mapa')
 
-const contato = document.querySelector('.contato')
+//MOVENDO OS ELEMENTOS
+//mover o titulo para a lista
+//primeiro seleciona para onde deseja enviar = lista, animais
+//no argumento vai o que deseja enviar = titulo, contato
+// lista.appendChild(titulo)
+// animais.appendChild(contato)
 
-const animais = document.querySelector('.animais')
-//seleciona o titulo de contato
-const titulo = contato.querySelector('.titulo')
+//primeiro seleciona para onde deseja enviar = contato(elemento pai) 
+//o primeiro argumento é o que deseja mover = lista
+//o segundo argumento é o elemento que deseja colocar antes = titulo
+//lista vai ser movido para antes do titulo do pai contato
+// contato.insertBefore(lista, titulo)
 
-//move o elemento TITULO para o elemento ANIMAIS
-// animais.appendChild(titulo)
-
-
-//ANIMAIS vai pra dentro da CONTATO
-//e fica anter do elemento TITULO
-// contato.insertBefore(animais, titulo)
-
-
-const faqH1 = document.querySelector('.faq > h1')
-const faq = document.querySelector('.faq')
-const mapa = document.querySelector('.mapa')
-
-//move o MAPA para FAQ, antes do FAQH1
-faq.insertBefore(mapa, faqH1)
-
-
-//remove o titulo de contato
-// contato.removeChild(titulo)
-
-//substitui o TITULO de CONTATO por LISTA
-contato.replaceChild(lista, titulo)
+//mapa vai ser movido para antes da lista do pai animais
+animais.insertBefore(mapa, lista)
