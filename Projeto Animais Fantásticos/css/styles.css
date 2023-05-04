@@ -237,3 +237,24 @@ body {
     }
 }
 
+/* NAVEGAÇÃO POR TAB */
+.js-tabcontent section {
+    display: none;
+}
+
+/* quando section estiver com a classe ativo, esconde */
+.js-tabcontent section.ativo {
+    display: block;
+
+    animation: show 1s forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
