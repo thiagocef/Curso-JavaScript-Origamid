@@ -146,6 +146,7 @@ body {
     margin-top: 32px;
     margin-bottom: 10px;
     color: var(--cor03);
+    cursor: pointer;
 }
 
 .faq-lista dt::before {
@@ -256,5 +257,37 @@ body {
 
     100% {
         opacity: 1;
+    }
+}
+
+.js-accordion dd {
+    display: none;
+}
+
+.js-accordion dt::after {
+    content: '⬎';
+    margin-left: 10px;
+}
+
+.js-accordion dt.ativo::after {
+    content: '⬑';
+}
+
+.js-accordion dd.ativo {
+    display: block;
+    animation: slideDown 1s forwards;
+
+    
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+
+    to {
+        opacity: 1;
+        max-height: 200px;
     }
 }
