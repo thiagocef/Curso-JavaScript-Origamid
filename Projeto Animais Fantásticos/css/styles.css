@@ -291,3 +291,20 @@ body {
         max-height: 200px;
     }
 }
+
+/*
+ANIMAÇÃO AO SCROLL
+*/
+.js .js-scroll {
+    opacity: 0;
+    /* left: -30px; */
+}
+
+.js .js-scroll.ativo {
+    /* opacity: 1;
+    transition: .3s; */
+    /* left: 0; */
+
+    animation: slideDown 1s forwards;
+
+}
