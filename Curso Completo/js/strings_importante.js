@@ -94,3 +94,43 @@ lsitaTransacoes.forEach(item => {
 })
 
 console.log(`Total de taxas: ${cont}`)
+
+
+// Retorne um número aleatório
+// entre 1050 e 2000
+const aleatório = Math.floor(Math.random() * 2000) + 1050
+console.log(aleatório)
+
+// Retorne o maior número da lista abaixo
+const numeroString = '4, 5, 20, 8, 9',
+      numeroArray = numeroString.split(', '),
+      numeroMaximo = Math.max(...numeroArray)
+console.log(numeroMaximo)
+
+
+// Crie uma função para limpar os preços
+// e retornar os números com centavos arredondados
+// depois retorne a soma total
+const listaPrecos = ['R$ 59,99', ' R$ 100,222',
+                     'R$ 230  ', 'r$  200'];
+
+
+
+let arredondado = [],
+soma = 0
+function limarPreco() {
+  listaPrecos.forEach(item => {
+    let limpo = +item.slice(3).trim().replace(',', '.')
+
+    // arredondado.push(limpo)
+    console.log(+limpo.toFixed(2))
+
+    soma = soma +  limpo
+
+  });
+  
+  console.log(+soma.toFixed(2))
+}
+
+limarPreco()
+
