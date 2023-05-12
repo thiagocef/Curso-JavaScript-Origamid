@@ -90,6 +90,7 @@ const tempo = aulas.map((aula) => {
 })
 console.log(tempo)
 
+// retorna os tempos das aulas
 const tempoAulas = aulas.map(aula => aula.min)
 // console.log(tempoAulas)
 
@@ -120,3 +121,113 @@ const maiorNum = num.reduce((anterior, atual) => {
 }, 0)
 
 console.log(maiorNum)
+
+
+// -------------------------------------------------------
+// -------------------------------------------------------
+const listaAulas = [
+  {
+    nome: 'HTML 1',
+    min: 15
+  },
+  {
+    nome: 'HTML 2',
+    min: 10
+  },
+  {
+    nome: 'CSS 1',
+    min: 20
+  },
+  {
+    nome: 'JS 1',
+    min: 25
+  },
+]
+
+// reduce() passando: 
+// um acumulador. no final está passado um objeto {}
+// os itens (aula)
+// os index
+const list = listaAulas.reduce((acumulador, aula, index) => {
+  console.log(aula.nome)
+  acumulador[index] = aula.nome
+  return acumulador
+}, {})
+
+
+
+// -------------------------------------------------------------
+// -------------------------- some() ---------------------------
+// -------------------------------------------------------------
+// RETORNA TRUE SE HOUVER PELO MENOS UMA OCORRÊNCIA VERDADEIRA
+
+const frutas = ['Banana', 'Pêra', 'Uva']
+
+const temUva = frutas.some(item => {
+  return item === 'Uva'
+  // retorna true se houver o item pesquisado
+})
+
+console.log(temUva)
+
+// -------------------------------------------------------------
+// -------------------------- every() ---------------------------
+// -------------------------------------------------------------
+// RETORNA FALSE SE HOUVER PELO MENOS UMA OCORRÊNCIA FALSA
+
+const valores = [6, 43, 22, 88, 101, 29]
+
+const valorMaior = valores.every(valor => {
+  return valor > 6
+  // retorna true se todos forem maior que 6
+})
+
+console.log(valorMaior)
+
+// -------------------------------------------------------------
+// ------------------------- filter() --------------------------
+// -------------------------------------------------------------
+// filtra a lista e retorna os valores true
+// pois undefined, null, 0 e '' são false
+
+const carros = ['gol', undefined, 'corsa', null, 0, 'Argo', '']
+
+const filtrarArray = carros.filter(item => {
+  return item
+})
+console.log(filtrarArray)
+
+
+const pares = [2, 4, 6, 8, 10, 12, 14]
+
+const filtraPares = pares.filter(item => {
+  return item > 6
+  // filtra e retorna apenas os valores maiores que 6
+})
+console.log(filtraPares)
+
+
+const AulasFilter = [
+  {
+    nome: 'HTML 1',
+    min: 15
+  },
+  {
+    nome: 'HTML 2',
+    min: 10
+  },
+  {
+    nome: 'CSS 1',
+    min: 20
+  },
+  {
+    nome: 'JS 1',
+    min: 25
+  },
+]
+
+// aulas maiores que 15 minutos
+const maior15 = AulasFilter.filter(item => {
+  return item.min > 15
+})
+console.log(maior15)
