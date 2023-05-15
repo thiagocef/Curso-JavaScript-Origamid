@@ -93,3 +93,13 @@ const honda = {
 
 const acelerarHonda = carro.acelerar.bind(honda)
 console.log(acelerarHonda(300, 15))
+
+// MAIS EXEMPLOS DE BIND
+function imc(altura, peso) {
+    return peso / (altura * altura)
+}
+
+const resultImc = imc.bind(null, 1.8)
+
+console.log(imc(1.8, 70).toFixed(2))
+console.log(resultImc(70))
