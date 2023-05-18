@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth; /*transição entre as sessões*/
+}
+
+:root {
+    --cor00: #faf6ed;
+    --cor01: #222;
+    --cor02: #fb5;
+    --cor03: #e54;
+}
+
+
+/*-----------------------------------------------*/
+/*-----------------------------------------------*/
+/*-----------------------------------------------*/
+
+img {
+    display: block;
+    max-width: 100%; /*não ultrapassa o container*/
+}
+
+body {
+    background-color: var(--cor00);
+    color: var(--cor01);
+
+    display: grid;
+    grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr; /*4 colunas*/
+}
+/*=========================== MENU ==============================*/
+.menu {
+    grid-column: 3/5; /*pera da linha 3 até a linha 5*/
+    margin-top: 2rem; 
+    margin-bottom: 2rem; /*em relação à base que é 16px*/
+    background-color: var(--cor02);
+}
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.menu li a {
+    display: block;
+    padding: 15px 10px;
+    min-width: 47px;
+    margin-right: 10px;
+    color: var(--cor01);
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 1.5rem;
+    letter-spacing: 3px; /*espaçamento entre as letras*/
+}
+
+/*=========================== GRID-SECTION ==============================*/
+.grid-section {
+    grid-column: 2/4; /*pega da linha 2 até a linha 4*/
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 90px 300px 1fr; /*tres colunas*/
+    grid-gap: 20px;
+    margin-bottom: 4rem;
+}
+
+.titulo { /**/
+    font-size: 6rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    grid-column: 1/4; /*pega da linha 1 até a 4*/
+}
+
+/*=========================== ANIMAIS ==============================*/
+.animais h2 {
+    color: var(--cor03);
+    font-family: monospace; 
+    letter-spacing: 3px;
+    font-size: 1rem;
+    margin-bottom: 16px;
+
+}
+.animais h2::before { /*criando o retângulo*/
+    content: ''; /*conteúdo vazio*/
+    display: inline-block;
+    width: 40px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: var(--cor02);
+}
+
+.animais p {
+    font-family:  Helvetica, Arial, sans-serif;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+/*configurando as imagens dos animais da lista*/
+.animais-lista {
+    height: 370px;
+    overflow-y: scroll; /*esconde o que passar do eixo y(vertical) e cria um scroll*/
+    grid-column: 2; /*fica na segunda coluna*/
+}
+.animais-lista li {
+    cursor: pointer;
+}
+/*-----------------------------------------*/
+/*ESTILIZANDO A BARRA DE SCROLL DAS IMAGENS*/
+/*-----------------------------------------*/
+.animais-lista::-webkit-scrollbar {
+    width: 15px;
+}
+.animais-lista::-webkit-scrollbar-thumb {
+    background-color: var(--cor02) ;
+    border-radius: 25px;
+    border-left: 2px solid var(--cor00);
+}
+.animais-lista::-webkit-scrollbar-track {
+    background-color: var(--cor00);
+}
+/*-----------------------------------------*/
+
+/*=========================== ANIMAIS-DESCRIÇÃO ==============================*/
+.animais-descricao {
+    grid-column: 3; /*fica na 3ª coluna*/
+}
+.animais-tipos {
+    margin-bottom: 48px;
+}
+
+/*=========================== FAQ ==============================*/
+
+.faq-lista {
+    grid-column: 2/4;
+}
+
+.faq-lista dt {
+    font-family: monospace;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    color: var(--cor03);
+    cursor: pointer;
+}
+
+.faq-lista dt::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: var(--cor02);
+}
+.faq-lista dd {
+    font-family: monospace;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+/*=========================== CONTATO ==============================*/
+
+.mapa {
+    grid-column: 2;
+}
+
+.dados {
+    grid-column: 3;
+}
+.dados li {
+    margin-bottom: 20px;
+}
+
+.dados li::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: var(--cor02);
+}
+
+/*=========================== CONTATO ==============================*/
+
+.copy {
+    grid-column: 3/5;
+    margin-bottom: 32px;
+    background-color: var(--cor02);
+}
+
+.copy p {
+    padding: 20px;
+    font-family: monospace;
+    font-size: 1.5rem;
+}
+
+/* ============================================================= */
+/* ======================= RESPONSIVE ========================== */
+/* ============================================================= */
+
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    .menu, .grid-section, .copy {
+        grid-column: 1;
+    }
+
+    .grid-section {
+        grid-template-columns: 100px 1fr;
+        grid-gap: 10px;
+    }
+
+    .animais-lista {
+        grid-column: 1;
+    }
+
+    .faq-lista, .dados, .mapa {
+        grid-column: 1/3;
+    }
+
+    .grid-section h1 {
+        font-size: 3rem;
+    }
+
+    .menu {
+        margin-top: 0;
+    }
+
+    .copy {
+        margin-bottom: 0;
+    }
+}
+
+/* NAVEGAÇÃO POR TAB */
+.js-tabcontent section {
+    display: none;
+}
+
+/* quando section estiver com a classe ativo, esconde */
+.js-tabcontent section.ativo {
+    display: block;
+
+    animation: show 1s forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.js-accordion dd {
+    display: none;
+}
+
+.js-accordion dt::after {
+    content: '⬎';
+    margin-left: 10px;
+}
+
+.js-accordion dt.ativo::after {
+    content: '⬑';
+}
+
+.js-accordion dd.ativo {
+    display: block;
+    animation: slideDown 1s forwards;
+
+    
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+
+    to {
+        opacity: 1;
+        max-height: 200px;
+    }
+}
+
+/*
+ANIMAÇÃO AO SCROLL
+*/
+.js .js-scroll {
+    opacity: 0;
+    /* left: -30px; */
+}
+
+.js .js-scroll.ativo {
+    /* opacity: 1;
+    transition: .3s; */
+    /* left: 0; */
+
+    animation: slideDown 1s forwards;
+
+}

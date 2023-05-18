@@ -34,3 +34,13 @@ Object.defineProperties(carro, {
 
 carro.rodas = 4
 console.log(carro.rodas)
+
+
+// Object.getOwnPropertyDescriptors()
+// lista todos os métodos e propriedade de um objeto
+// e suas confurações
+
+console.log(Object.getOwnPropertyDescriptors(carro))
+
+// 
+console.log(Object.getOwnPropertyNames(carro))
