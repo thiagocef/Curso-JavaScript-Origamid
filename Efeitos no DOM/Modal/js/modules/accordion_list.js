@@ -1,10 +1,6 @@
 // EXPORTANDO este arquivo para o script principal
 // export default
 
-// importando arquivos de teste_modules
-import * as teste from "./teste_modules.js"
-
-
 //função init apenas para isolar este script 
 //para não dar conflito nos scripts seguinte
 export default function initAccordion() {

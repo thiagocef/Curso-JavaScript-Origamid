@@ -9,10 +9,3 @@ initTabNav() // ativando
 
 import initAccordion from "./modules/accordion_list.js" // importando
 initAccordion() // ativando
-
-// PODEM SER IMPORTADOS: 
-// objetos, funções, classes, numeros, strings...
-// aqui foi importado testando e senha do arquivo teste_modules.js
-import { testando, senha } from "./modules/teste_modules.js"
-testando()
-// console.log(senha)
