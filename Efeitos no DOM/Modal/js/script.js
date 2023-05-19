@@ -9,3 +9,11 @@ initTabNav() // ativando
 
 import initAccordion from "./modules/accordion_list.js" // importando
 initAccordion() // ativando
+
+// importando o script do modal 
+import initModal from "./modules/modal.js"
+initModal()
+
+// importando scrip do tooltip
+import iniTooltip from "./modules/tooltip.js"
+iniTooltip()
