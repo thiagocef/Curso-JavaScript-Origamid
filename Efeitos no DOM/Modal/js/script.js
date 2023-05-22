@@ -17,3 +17,6 @@ initModal()
 // importando scrip do tooltip
 import iniTooltip from "./modules/tooltip.js"
 iniTooltip()
+
+import initDropdownMenu from "./modules/dropdown-menu.js"
+initDropdownMenu()
