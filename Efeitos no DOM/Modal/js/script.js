@@ -2,7 +2,7 @@
 // 1 - utilizando import 'nome da função' from '.caminho do arquivo ex /js/...'
 // 2 - ativa a função
 
-// obs: os scripts serão executados na ordem de em que foram importatos
+// obs: os scripts serão executados na ordem em que foram importatos
 
 import initTabNav from "./modules/navegacao_por_tab.js" // importando
 initTabNav() // ativando

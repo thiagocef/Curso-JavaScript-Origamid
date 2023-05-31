@@ -16,3 +16,9 @@ initAccordion() // ativando
 import { testando, senha } from "./modules/teste_modules.js"
 testando()
 // console.log(senha)
+
+function espera(texto) {
+    console.log(texto)
+}
+setTimeout(espera, 1000, 'passou 1 s')
+

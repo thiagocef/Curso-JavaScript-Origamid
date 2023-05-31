@@ -5,10 +5,10 @@ const mapa = document.querySelector('.mapa'),
 //CRIANDO ELEMENTOS
 //createElement()
 const novoH1 = document.createElement('h1') //novo elemento
-novoH1.innerText = 'Agora eu tenho um título novo' //adionado um texto ao título
-novoH1.classList.add('titulo') //adicionado uma classe 
-contato.appendChild(novoH1) //inserindo no documento
-console.log(novoH1)
+      novoH1.innerText = 'Agora eu tenho um título novo' //adionado um texto ao título
+      novoH1.classList.add('titulo') //adicionado uma classe 
+      contato.appendChild(novoH1) //inserindo no documento
+      console.log(novoH1)
 
 //----------------------
 //----- EXERCÍCIOS -----

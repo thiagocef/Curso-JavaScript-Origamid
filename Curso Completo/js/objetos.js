@@ -95,16 +95,16 @@ console.log(carro.preco)
 // Crie um objeto de um cachorro que represente um labrador,
 // preto com 10 anos, que late ao ver um homem
 var cachorro = {
-raca: 'labrador',
-cor: 'preto',
-idade: 10,
-late: function(pessoa) {
-    if (pessoa === 'h') {
-        return 'AU AU AU!!'
-    } else {
-        return ':P'
+    raca: 'labrador',
+    cor: 'preto',
+    idade: 10,
+    late: function(pessoa) {
+        if (pessoa === 'h') {
+            return 'AU AU AU!!'
+        } else {
+            return ':P'
+        }
     }
-}
 }
 console.log(cachorro.late('h'))
 
