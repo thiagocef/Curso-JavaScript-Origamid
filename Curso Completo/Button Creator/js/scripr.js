@@ -1,4 +1,4 @@
-const controles = document.querySelector('#controles'),
+const controles = document.getElementById('controles'),
       cssText = document.querySelector('.css'),
       btn = document.querySelector('.btn')
 
@@ -49,10 +49,17 @@ function handleChange(event) {
     // ou
     // handleStyle['backgroundColor'](value)
 
+    salvarValues(name, value)
     showCss()
 }
 
 // função para mostrar o resultado pro usurário
 function showCss() {
     cssText.innerHTML = '<span>' + btn.style.cssText.split('; ').join(';</span><span>')
+}
+
+// SALVANDO NO LOCALSTORAGE
+function salvarValues(name, value) {
+    localStorage[name] = value
+    
 }
