@@ -1,7 +1,8 @@
 const meuCep = '32323321'
 
 
-const cep = fetch('./style.css')
+// const cep = fetch('./style.css')
+const cep = fetch('https://viacep.com.br/ws/01001000/json')
 
 const conteudo = document.querySelector('.conteudo')
 
